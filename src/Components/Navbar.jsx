@@ -33,7 +33,7 @@ const Navbar = () => {
       }`}
     >
       <div className="flex justify-between items-center container max-w-[86rem] px-4 justify-self-center transition-all duration-200 ease-in-out">
-        <a href="/">
+        <a href="/shreeja-digital/">
           <img
             className="logo h-10 w-auto"
             src={logo}

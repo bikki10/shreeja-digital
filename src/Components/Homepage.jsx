@@ -2,6 +2,7 @@
 import ButtonComponent from "../Ui/ButtonComponent";
 import { FaArrowRight } from "react-icons/fa6";
 import { motion } from "motion/react";
+import heroImage from "/hero.png";
 
 const Homepage = () => {
   return (
@@ -42,10 +43,16 @@ const Homepage = () => {
             transition={{ duration: 0.5, delay: 0.5 }}
             className="flex flex-col sm:flex-row justify-center gap-4"
           >
-            <ButtonComponent href="#contact" className="btn__primary justify-center flex items-center gap-1 hover:-translate-y-1 transition-all ease-linear">
+            <ButtonComponent
+              href="#contact"
+              className="btn__primary justify-center flex items-center gap-1 hover:-translate-y-1 transition-all ease-linear"
+            >
               Get Started <FaArrowRight />
             </ButtonComponent>
-            <ButtonComponent href="#whyTrustUs" className="btn__secondary hover:-translate-y-1 transition-all ease-linear">
+            <ButtonComponent
+              href="#whyTrustUs"
+              className="btn__secondary hover:-translate-y-1 transition-all ease-linear"
+            >
               <p className="text-indigo-600">Why Trust Us?</p>
             </ButtonComponent>
           </motion.div>
@@ -60,7 +67,7 @@ const Homepage = () => {
           <div className="rounded-xl overflow-hidden shadow-2xl">
             <img
               className="w-full h-auto"
-              src="/hero.png"
+              src={heroImage}
               alt="Banner Image"
               width={200}
               height={200}
