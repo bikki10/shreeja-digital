@@ -1,0 +1,1 @@
+export const footerText = `We create digital experiences that stand out. Our team of experts is dedicated to bringing your vision to life.`; 

@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+.logo {
+  width: auto;
+  height: 40px;
+}
+
+button {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn__primary {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.35rem;
+  border: 1px solid transparent;
+  border-radius: 0.35rem;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background: linear-gradient(to right, #9333ea, #3b82f6);
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn__primary:hover {
+  transform: scale(1.025);
+  opacity: 90%;
+}
+
+.btn__secondary {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.35rem;
+  border: 1px solid rgba(128, 128, 128, 0.627);
+  border-radius: 0.35rem;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background: #fff;
+  color: #000;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn__secondary:hover {
+  transform: scale(1.025);
+  opacity: 90%;
+}
+
+.btn__secondary-color {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.35rem;
+  border: 1px solid rgba(128, 128, 128, 0.627);
+  border-radius: 0.35rem;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background: #fff;
+  color: #4f39f6;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn__secondary-color:hover {
+  transform: scale(1.025);
+  opacity: 90%;
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #9333ea, #3b82f6);
+  color: transparent;
+  background-clip: text;
+}
+
+.text-color {
+  color: #4b5563;
+}
+
+.bg-gradient-color {
+  background: linear-gradient(to right, #9333ea, #3b82f6);
+}
+
+.hero-pattern {
+  background-color: #fff;
+  background-image: radial-gradient(#6d28d9 0.5px, transparent 0.5px),
+    radial-gradient(#6d28d9 0.5px, #ffffff 0.5px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+  opacity: 0.1;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
