@@ -2,6 +2,7 @@
 import ButtonComponent from "../Ui/ButtonComponent";
 import { FaArrowRight } from "react-icons/fa6";
 import { motion } from "motion/react";
+import heroImage from "/hero.png";
 
 const Homepage = () => {
   return (
