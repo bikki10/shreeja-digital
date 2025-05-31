@@ -5,7 +5,11 @@ import { ServiceCardData } from "../constants/ServicesData";
 
 const OurServices = () => {
   return (
-    <section id="services" className="pt-20 pb-10 md:py-20 bg-gray-50">
+    <section
+      id="services"
+      className="pt-20 pb-10 md:py-20 bg-gray-50"
+      aria-labelledby="our-services-heading"
+    >
       <div className="container max-w-[86rem] px-4 md:px-6 justify-self-center">
         <motion.div
           viewport={{ once: true }}
@@ -14,7 +18,10 @@ const OurServices = () => {
           transition={{ duration: 0.25, delay: 0.25 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2
+            id="our-services-heading"
+            className="text-3xl md:text-4xl font-bold mb-4"
+          >
             Our
             <span className="text-gradient"> Services</span>
           </h2>
@@ -29,17 +36,17 @@ const OurServices = () => {
           initial={{ opacity: 0, y: 25 }}
           transition={{ duration: 0.25, delay: 0.25 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          role="list"
         >
-          {ServiceCardData.map((item, index) => {
-            return (
-              <ServiceCard
-                key={index}
-                icon={item.icon}
-                title={item.title}
-                details={item.details}
-              />
-            );
-          })}
+          {ServiceCardData.map((item, index) => (
+            <ServiceCard
+              key={index}
+              icon={item.icon}
+              title={item.title}
+              details={item.details}
+              role="listitem"
+            />
+          ))}
         </motion.div>
       </div>
     </section>

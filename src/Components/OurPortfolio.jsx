@@ -5,15 +5,22 @@ import { motion } from "motion/react";
 
 const Portfolio = () => {
   return (
-    <section className="bg-white py-20" id="portfolio">
+    <section
+      className="bg-white py-20"
+      id="portfolio"
+      aria-labelledby="portfolio-heading"
+    >
       <motion.div
         viewport={{ once: true }}
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 25 }}
         transition={{ duration: 0.25, delay: 0.25 }}
-        className="text-center max-w-[86rem] mx-auto "
+        className="text-center max-w-[86rem] mx-auto"
       >
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <h2
+          id="portfolio-heading"
+          className="text-3xl md:text-4xl font-bold mb-4"
+        >
           Our <span className="text-gradient">Portfolio</span>
         </h2>
         <p className="text-lg text-gray-600">
@@ -26,17 +33,17 @@ const Portfolio = () => {
           initial={{ opacity: 0, y: 25 }}
           transition={{ duration: 0.25, delay: 0.5 }}
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-16 px-4 md:px-6"
+          role="list"
         >
-          {portfolioData.map((item, index) => {
-            return (
-              <ImageCard
-                key={index}
-                image={item.image}
-                title={item.title}
-                description={item.description}
-              />
-            );
-          })}
+          {portfolioData.map((item, index) => (
+            <ImageCard
+              key={index}
+              image={item.image}
+              title={item.title}
+              description={item.description}
+              role="listitem"
+            />
+          ))}
         </motion.div>
       </motion.div>
     </section>

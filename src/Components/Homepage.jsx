@@ -9,6 +9,7 @@ const Homepage = () => {
     <section
       id="homepage"
       className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-white/90"
+      aria-labelledby="homepage-heading"
     >
       <div className="container mx-auto px-4 relative z-10 max-w-[86rem]">
         <div className="max-w-4xl mx-auto text-center">
@@ -17,6 +18,7 @@ const Homepage = () => {
             whileInView={{ opacity: 1, y: 0 }}
             initial={{ opacity: 0, y: 25 }}
             transition={{ duration: 0.25 }}
+            id="homepage-heading"
             className="text-4xl md:text-6xl font-bold mb-6"
           >
             We Create{" "}
@@ -46,12 +48,14 @@ const Homepage = () => {
             <ButtonComponent
               href="#contact"
               className="btn__primary justify-center flex items-center gap-1 hover:-translate-y-1 transition-all ease-linear"
+              aria-label="Get Started with Shreeja Digital Agency"
             >
               Get Started <FaArrowRight />
             </ButtonComponent>
             <ButtonComponent
               href="#whyTrustUs"
               className="btn__secondary hover:-translate-y-1 transition-all ease-linear"
+              aria-label="Learn Why You Can Trust Shreeja Digital Agency"
             >
               <p className="text-indigo-600">Why Trust Us?</p>
             </ButtonComponent>
@@ -66,9 +70,10 @@ const Homepage = () => {
         >
           <div className="rounded-xl overflow-hidden shadow-2xl">
             <img
+              loading="lazy"
               className="w-full h-auto"
-              src="/hero.png"
-              alt="Banner Image"
+              src={heroImage}
+              alt="Hero banner showcasing digital experiences by Shreeja Digital Agency"
               width={200}
               height={200}
             />
@@ -78,7 +83,7 @@ const Homepage = () => {
               <h2 className="text-2xl lg:text-3xl font-bold text-gradient">
                 Led By
               </h2>
-              <p className="text-sm md:text-base text-color">
+              <p className="text-sm md:text-base text-gray-600">
                 Experienced Professionals
               </p>
             </div>
@@ -86,13 +91,13 @@ const Homepage = () => {
               <h2 className="text-2xl lg:text-3xl font-bold text-gradient">
                 Driven By
               </h2>
-              <p className="text-sm md:text-base text-color">Innovation</p>
+              <p className="text-sm md:text-base text-gray-600">Innovation</p>
             </div>
             <div className="bg-white shadow-lg rounded-lg p-4 md:p-6 text-center items-center">
               <h2 className="text-2xl lg:text-3xl font-bold text-gradient">
                 Small Team
               </h2>
-              <p className="text-sm md:text-base text-color">
+              <p className="text-sm md:text-base text-gray-600">
                 Focused On Quality
               </p>
             </div>
@@ -100,7 +105,7 @@ const Homepage = () => {
               <h2 className="text-2xl lg:text-3xl font-bold text-gradient">
                 Partnerships
               </h2>
-              <p className="text-sm md:text-base text-color">That Last</p>
+              <p className="text-sm md:text-base text-gray-600">That Last</p>
             </div>
           </div>
         </motion.div>

@@ -31,13 +31,15 @@ const Navbar = () => {
           ? "shadow-lg fixed top-0 left-0 w-full bg-white transition-all duration-200 py-2 z-50"
           : "fixed top-0 left-0 w-full bg-white py-3 transition-all duration-200 z-50"
       }`}
+      aria-label="Main Navigation"
     >
-      <div className="flex justify-between items-center container max-w-[86rem] px-4 justify-self-center transition-all duration-200 ease-in-out">
-        <a href="/shreeja-digital/">
+      <div className="flex justify-between items-center container max-w-[86rem] px-4 transition-all duration-200 ease-in-out">
+        <a href="/shreeja-digital/" aria-label="Shreeja Digital Agency Home">
           <img
+            loading="lazy"
             className="logo h-10 w-auto"
             src={logo}
-            alt="Shreeja Digital Agency"
+            alt="Shreeja Digital Agency Logo"
             title="Shreeja Digital Agency"
           />
         </a>
@@ -49,12 +51,13 @@ const Navbar = () => {
               key={index}
               href={item.href}
               className="text-sm font-medium hover:text-indigo-500 transition-all"
+              aria-label={`Navigate to ${item.label}`}
             >
               {item.label}
             </a>
           ))}
           <span className="hidden lg:block">
-            <ButtonComponent href="#contact" className="btn__primary ">
+            <ButtonComponent href="#contact" className="btn__primary">
               Get Started
             </ButtonComponent>
           </span>
@@ -65,7 +68,7 @@ const Navbar = () => {
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="text-gray-700 transition-all duration-200 ease-in-out"
-            aria-label="Toggle Menu"
+            aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
           >
             {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
@@ -74,19 +77,23 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white px-4 pt-4 pb-6 shadow-md transition-all duration-200 ease-in-out">
+        <div
+          className="md:hidden bg-white px-4 pt-4 pb-6 shadow-md transition-all duration-200 ease-in-out"
+          role="menu"
+        >
           {headers.map((item, index) => (
             <a
               key={index}
               href={item.href}
               onClick={() => setIsMenuOpen(false)}
               className="block py-2 text-sm font-medium text-gray-800 hover:text-indigo-500 transition-all"
+              aria-label={`Navigate to ${item.label}`}
             >
               {item.label}
             </a>
           ))}
           <div className="mt-4">
-            <ButtonComponent className="btn__primary w-full">
+            <ButtonComponent href="#contact" className="btn__primary w-full">
               Get Started
             </ButtonComponent>
           </div>

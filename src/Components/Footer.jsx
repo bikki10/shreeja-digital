@@ -12,82 +12,97 @@ const year = date.getFullYear();
 const services = [
   {
     label: "Web Design",
-    href: "/",
+    href: "#footer",
   },
   {
     label: "Web Development",
-    href: "/",
+    href: "#footer",
   },
   {
     label: "Mobile Apps",
-    href: "/",
+    href: "#footer",
   },
   {
     label: "UI/UX Design",
-    href: "/",
+    href: "#footer",
   },
   {
     label: "Digital Marketing",
-    href: "/",
+    href: "#footer",
   },
 ];
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-50 pt-16 pb-8 px-4 md:px-6">
-      <div className="container max-w-[86rem] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 border-b border-gray-200">
+    <footer
+      className="bg-gray-50 pt-16 pb-8 px-4 md:px-6"
+      aria-labelledby="footer-heading"
+    >
+      <div
+        className="container max-w-[86rem] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 border-b border-gray-200"
+        role="contentinfo"
+      >
         <div>
-          <a href="/">
+          <a href="/" aria-label="Shreeja Digital Agency Home">
             <img
+              loading="lazy"
               className="logo"
               src={logo}
               width={100}
               height={100}
               title="Shreeja Digital Agency"
-              alt="Shreeja Digital Agency"
+              alt="Shreeja Digital Agency Logo"
             />
           </a>
           <div className="my-5 flex flex-col justify-center gap-4 md:pr-3">
             <p className="text-gray-600 flex flex-wrap">{footerText}</p>
             <span className="flex gap-3 text-2xl">
               <a
-                title="Facebook Page"
+                title="Visit our Facebook Page"
                 href="https://www.facebook.com/shreejadigitalagency"
                 target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook Page"
               >
                 <FaFacebook className="text-blue-600" />
               </a>
               <a
-                title="Instagram Page"
-                href="https://www.facebook.com/shreejadigitalagency"
+                title="Visit our Instagram Page"
+                href="https://www.instagram.com/shreejadigitalagency"
                 target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram Page"
               >
                 <FaInstagram className="text-fuchsia-600" />
               </a>
               <a
-                title="LinkedIn Page"
-                href="https://www.facebook.com/shreejadigitalagency"
+                title="Visit our LinkedIn Page"
+                href="https://www.linkedin.com/company/shreejadigitalagency"
                 target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn Page"
               >
                 <FaLinkedin className="text-blue-600" />
               </a>
             </span>
           </div>
         </div>
-        <div className=" flex flex-col gap-4">
-          <h2 className="text-lg font-semibold">Services</h2>
+        <div className="flex flex-col gap-4">
+          <h2 id="footer-heading" className="text-lg font-semibold">
+            Services
+          </h2>
           <ul className="text-gray-600 text-md flex flex-wrap gap-4 mt-3 md:pr-4">
-            {services.map((item, index) => {
-              return (
+            {services.map((item, index) => (
+              <li key={index}>
                 <a
                   className="hover:text-indigo-500 transition-all ease-in-out duration-200"
                   href={item.href}
-                  key={index}
+                  aria-label={`Learn more about ${item.label}`}
                 >
-                  <li>{item.label}</li>
+                  {item.label}
                 </a>
-              );
-            })}
+              </li>
+            ))}
           </ul>
         </div>
         <div>
@@ -95,9 +110,18 @@ const Footer = () => {
           <div className="mt-3">
             <span className="flex items-center gap-2">
               <GoMail />
-              <p className="text-gray-600">contact@shreejadigital.com</p>
+              <a
+                href="mailto:contact@shreejadigital.com"
+                className="text-gray-600 hover:text-indigo-500 transition-all"
+                aria-label="Send an email to contact@shreejadigital.com"
+              >
+                contact@shreejadigital.com
+              </a>
             </span>
-            <ButtonComponent className="btn__primary mt-3 w-full md:w-auto">
+            <ButtonComponent
+              href="#contact"
+              className="btn__primary mt-3 w-full md:w-auto"
+            >
               Get In Touch
             </ButtonComponent>
           </div>

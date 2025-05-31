@@ -42,14 +42,15 @@ const contactData = [
 
 const Contact = () => {
   return (
-    <main id="contact" className="bg-gray-50">
+    <main id="contact" className="bg-gray-50" aria-labelledby="contact-heading">
       <div className="pt-20 pb-10 md:py-20 container max-w-[86rem] px-4 md:px-6 justify-self-center">
-        <motion.div className=" text-center max-w-3xl mx-auto mb-16">
+        <motion.div className="text-center max-w-3xl mx-auto mb-16">
           <motion.h2
             viewport={{ once: true }}
             whileInView={{ opacity: 1, y: 0 }}
             initial={{ opacity: 0, y: 25 }}
             transition={{ duration: 0.25, delay: 0.25 }}
+            id="contact-heading"
             className="text-3xl md:text-4xl font-bold mb-4"
           >
             Get In <span className="text-gradient">Touch</span>
@@ -61,8 +62,8 @@ const Contact = () => {
             transition={{ duration: 0.25, delay: 0.5 }}
             className="text-lg text-gray-600"
           >
-            Have a question or want to discuss a project? We'd love to hear from
-            you. Fill out the form below or use our contact information.
+            Having a question or want to discuss a project? We'd love to hear
+            from you. Fill out the form below or use our contact information.
           </motion.p>
         </motion.div>
         <section className="bg-white">
@@ -74,6 +75,7 @@ const Contact = () => {
               transition={{ duration: 0.25, delay: 0.55 }}
               className="rounded-xl shadow-lg p-8"
               action="submit"
+              aria-label="Contact Form"
             >
               <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -85,7 +87,7 @@ const Contact = () => {
                     Your Name <span className="text-gradient">*</span>
                   </label>
                   <input
-                    autoComplete="true"
+                    autoComplete="name"
                     id="name"
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#4f39f6] focus:border-transparent"
                     type="text"
@@ -101,7 +103,7 @@ const Contact = () => {
                     Your Email <span className="text-gradient">*</span>
                   </label>
                   <input
-                    autoComplete="true"
+                    autoComplete="email"
                     id="email"
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#4f39f6] focus:border-transparent"
                     type="email"
@@ -119,10 +121,10 @@ const Contact = () => {
                     Phone Number
                   </label>
                   <input
-                    autoComplete="true"
+                    autoComplete="tel"
                     id="phone"
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#4f39f6] focus:border-transparent"
-                    type="text"
+                    type="tel"
                     placeholder="Phone Number"
                   />
                 </div>
@@ -134,7 +136,7 @@ const Contact = () => {
                     Subject <span className="text-gradient">*</span>
                   </label>
                   <input
-                    autoComplete="true"
+                    autoComplete="off"
                     id="subject"
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#4f39f6] focus:border-transparent"
                     type="text"
@@ -170,28 +172,27 @@ const Contact = () => {
               whileInView={{ opacity: 1, y: 0 }}
               initial={{ opacity: 0, y: -25 }}
               transition={{ duration: 0.25, delay: 0.55 }}
-              className="rounded-xl shadow-lg p-8 h-full "
+              className="rounded-xl shadow-lg p-8 h-full"
+              aria-label="Contact Information"
             >
               <h2 className="text-2xl font-bold mb-6">Contact Us</h2>
-              {contactData.map((item, index) => {
-                return (
-                  <div key={index} className="flex items-start mt-6">
-                    <div className="mr-4 rounded-full p-2 bg-[#6F5AF61A] text-indigo-500">
-                      {item.icon}
-                    </div>
-                    <span>
-                      <h3 className="font-semibold text-gray-800">
-                        {item.title}
-                      </h3>
-                      {Object.values(item.details).map((detail, idx) => (
-                        <p className="text-gray-600" key={idx}>
-                          {detail}
-                        </p>
-                      ))}
-                    </span>
+              {contactData.map((item, index) => (
+                <div key={index} className="flex items-start mt-6">
+                  <div className="mr-4 rounded-full p-2 bg-[#6F5AF61A] text-indigo-500">
+                    {item.icon}
                   </div>
-                );
-              })}
+                  <span>
+                    <h3 className="font-semibold text-gray-800">
+                      {item.title}
+                    </h3>
+                    {Object.values(item.details).map((detail, idx) => (
+                      <p className="text-gray-600" key={idx}>
+                        {detail}
+                      </p>
+                    ))}
+                  </span>
+                </div>
+              ))}
             </motion.div>
           </div>
         </section>
