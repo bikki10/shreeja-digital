@@ -10,8 +10,8 @@ const OurServices = () => {
         <motion.div
           viewport={{ once: true }}
           whileInView={{ opacity: 1, y: 0 }}
-          initial={{ opacity: 0, y: 50 }}
-          transition={{ duration: 0.5, delay:0.25 }}
+          initial={{ opacity: 0, y: 25 }}
+          transition={{ duration: 0.25, delay: 0.25 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -26,8 +26,8 @@ const OurServices = () => {
         <motion.div
           viewport={{ once: true }}
           whileInView={{ opacity: 1, y: 0 }}
-          initial={{ opacity: 0, y: 50 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
+          initial={{ opacity: 0, y: 25 }}
+          transition={{ duration: 0.25, delay: 0.25 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {ServiceCardData.map((item, index) => {

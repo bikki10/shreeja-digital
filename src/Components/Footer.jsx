@@ -34,13 +34,7 @@ const services = [
 
 const Footer = () => {
   return (
-    <motion.footer
-      viewport={{ once: true }}
-      whileInView={{ opacity: 1, y: 0 }}
-      initial={{ opacity: 0, y: 50 }}
-      transition={{ duration: 0.5, delay: 0.25 }}
-      className="bg-gray-50 pt-16 pb-8 px-4 md:px-6"
-    >
+    <footer className="bg-gray-50 pt-16 pb-8 px-4 md:px-6">
       <div className="container max-w-[86rem] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 border-b border-gray-200">
         <div>
           <a href="/">
@@ -109,10 +103,16 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <p className="text-[#6B7280] text-center pt-4 text-sm">
+      <motion.p
+        viewport={{ once: true }}
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: -20 }}
+        transition={{ duration: 0.25, delay: 0.25 }}
+        className="text-[#6B7280] text-center pt-4 text-sm"
+      >
         © {year} Shreeja Digital Agency. All Rights Reserved.
-      </p>
-    </motion.footer>
+      </motion.p>
+    </footer>
   );
 };
 

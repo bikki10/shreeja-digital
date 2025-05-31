@@ -9,8 +9,8 @@ const Portfolio = () => {
       <motion.div
         viewport={{ once: true }}
         whileInView={{ opacity: 1, y: 0 }}
-        initial={{ opacity: 0, y: 50 }}
-        transition={{ duration: 0.5, delay: 0.25 }}
+        initial={{ opacity: 0, y: 25 }}
+        transition={{ duration: 0.25, delay: 0.25 }}
         className="text-center max-w-[86rem] mx-auto "
       >
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -23,8 +23,8 @@ const Portfolio = () => {
         <motion.div
           viewport={{ once: true }}
           whileInView={{ opacity: 1, y: 0 }}
-          initial={{ opacity: 0, y: 50 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
+          initial={{ opacity: 0, y: 25 }}
+          transition={{ duration: 0.25, delay: 0.5 }}
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-16 px-4 md:px-6"
         >
           {portfolioData.map((item, index) => {
@@ -44,14 +44,3 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
-
-{/* <div className="text-center max-w-3xl mx-auto mb-16">
-  <h2 className="text-3xl md:text-4xl font-bold mb-4">
-    Our
-    <span className="text-gradient"> Services</span>
-  </h2>
-  <p className="text-lg text-gray-600">
-    We offer a comprehensive range of digital services to help your business
-    thrive in the digital world.
-  </p>
-</div>; */}

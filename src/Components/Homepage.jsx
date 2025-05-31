@@ -2,7 +2,6 @@
 import ButtonComponent from "../Ui/ButtonComponent";
 import { FaArrowRight } from "react-icons/fa6";
 import { motion } from "motion/react";
-import heroImage from "/hero.png";
 
 const Homepage = () => {
   return (
@@ -15,8 +14,8 @@ const Homepage = () => {
           <motion.h1
             viewport={{ once: true }}
             whileInView={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: 50 }}
-            transition={{ duration: 0.5 }}
+            initial={{ opacity: 0, y: 25 }}
+            transition={{ duration: 0.25 }}
             className="text-4xl md:text-6xl font-bold mb-6"
           >
             We Create{" "}
@@ -28,8 +27,8 @@ const Homepage = () => {
           <motion.p
             viewport={{ once: true }}
             whileInView={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: 50 }}
-            transition={{ duration: 0.5, delay: 0.25 }}
+            initial={{ opacity: 0, y: 25 }}
+            transition={{ duration: 0.25, delay: 0.25 }}
             className="text-lg md:text-xl text-gray-600 mb-8 md:mb-10 max-w-4xl"
           >
             Transforming ideas into exceptional digital solutions. Our team of
@@ -39,8 +38,8 @@ const Homepage = () => {
           <motion.div
             viewport={{ once: true }}
             whileInView={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: 50 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
+            initial={{ opacity: 0, y: 25 }}
+            transition={{ duration: 0.25, delay: 0.5 }}
             className="flex flex-col sm:flex-row justify-center gap-4"
           >
             <ButtonComponent
@@ -60,14 +59,14 @@ const Homepage = () => {
         <motion.div
           viewport={{ once: true }}
           whileInView={{ opacity: 1, y: 0 }}
-          initial={{ opacity: 0, y: 50 }}
-          transition={{ duration: 0.5, delay: 0.75 }}
+          initial={{ opacity: 0, y: 25 }}
+          transition={{ duration: 0.25, delay: 0.75 }}
           className="mt-16 md:mt-20 relative"
         >
           <div className="rounded-xl overflow-hidden shadow-2xl">
             <img
               className="w-full h-auto"
-              src={heroImage}
+              src="/hero.png"
               alt="Banner Image"
               width={200}
               height={200}

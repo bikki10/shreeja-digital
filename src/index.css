@@ -4,6 +4,15 @@ html {
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  background: #eae5e5;
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #4436ac;
+  border-radius: 15rem;
+}
+
 .logo {
   width: auto;
   height: 40px;
@@ -19,7 +28,8 @@ button {
   justify-content: center;
   align-items: center;
   gap: 0.35rem;
-  border: 1px solid transparent;
+  border: 1px 1px solid transparent;
+  border-color: linear-gradient(to right, #9333ea, #3b82f6);
   border-radius: 0.35rem;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
@@ -41,6 +51,7 @@ button {
   align-items: center;
   gap: 0.35rem;
   border: 1px solid rgba(128, 128, 128, 0.627);
+  
   border-radius: 0.35rem;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
@@ -99,7 +110,6 @@ button {
   background-position: 0 0, 10px 10px;
   opacity: 0.1;
 }
-
 
 @keyframes fadeIn {
   from {

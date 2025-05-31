@@ -7,8 +7,8 @@ const WhyTrustUs = () => {
     <motion.section
       viewport={{ once: true }}
       whileInView={{ opacity: 1, y: 0 }}
-      initial={{ opacity: 0, y: 50 }}
-      transition={{ duration: 0.5, delay: 0.25 }}
+      initial={{ opacity: 0, y: 25 }}
+      transition={{ duration: 0.25, delay: 0.25 }}
       id="whyTrustUs"
       className="py-5 md:py-20 bg-gray-50"
     >

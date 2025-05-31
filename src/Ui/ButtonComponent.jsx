@@ -9,12 +9,7 @@ const ButtonComponent = ({
 }) => {
   if (href) {
     return (
-      <a
-        href={href}
-        className={`${className} inline-block`}
-        onClick={onClick}
-        {...props}
-      >
+      <a href={href} className={`${className}`} onClick={onClick} {...props}>
         {children}
       </a>
     );
