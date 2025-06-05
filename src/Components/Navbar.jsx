@@ -26,7 +26,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${
+      className={` flex justify-center ${
         isFixed
           ? "shadow-lg fixed top-0 left-0 w-full bg-white transition-all duration-200 py-2 z-50"
           : "fixed top-0 left-0 w-full bg-white py-3 transition-all duration-200 z-50"
